@@ -12,7 +12,15 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	,"postCreateCommand": "/workspaces/AskBQ/.devcontainer/init.sh"
+	,
+	"postCreateCommand": "/workspaces/AskBQ/.devcontainer/init.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
