@@ -1,6 +1,9 @@
 # Ask better questions
 
-[中文版](/doc/README-zh.md)
+<p align="center">
+  <a href="/README.md">English</a> |
+  <a href="/doc/README-zh.md">简体中文</a>
+</p>
 
 ## Good questions are often more important than answers!
 

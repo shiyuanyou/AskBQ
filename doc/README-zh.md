@@ -1,5 +1,10 @@
 # 问更好的问题
 
+<p align="center">
+  <a href="/README.md">English</a> |
+  <a href="/doc/README-zh.md">简体中文</a>
+</p>
+
 ## Prompt
 
 直接可用于优化问题的prompt：
