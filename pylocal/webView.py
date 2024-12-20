@@ -15,6 +15,7 @@ def loopInputExcute(func):
 
         result = func(user_input)
         clear()
+        put_markdown(f"# 问题\n ## {user_input}")
         put_markdown(result)
 
 def foo(x:str):

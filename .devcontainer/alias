@@ -1,2 +1,2 @@
 alias ll='ls -la'
-alias run='cd pylocal && python main.py'
+alias run='cd /workspaces/AskBQ/pylocal && python main.py'
