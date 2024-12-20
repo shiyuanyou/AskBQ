@@ -1,13 +1,13 @@
 from openai import OpenAI
-import yaml
-import json
+import argparse
 
 from encrypt import getKey
 from errorCode import (
     RequestErrorCode,
     hintRequestErrorCode
 )
-
+from enhanceQ import EnhanceQ
+from webView import loopInputExcute
 url = "https://api.deepseek.com"
 
 def getResult(client, messages):
@@ -25,7 +25,7 @@ def getResult(client, messages):
         return
     return response.choices[0].message.content
 
-def main():
+def main(rawQuestion:str):
     key = getKey()
     try:
         client = OpenAI(api_key=key, base_url=url)
@@ -33,13 +33,14 @@ def main():
         print(f"Error creating OpenAI client: {e}")
         return
     
-    print(client.models.list())
-    
-    result = getResult(client, [
-        {"role": "system", "content": "You are a helpful assistant"},
-        {"role": "user", "content": "Hello"}
-    ])
+    # print(client.models.list())
+
+    enhanceQ = EnhanceQ(rawQuestion)
+    messages = enhanceQ.enhanceV1()
+    print(messages)
+    result = getResult(client, messages)
     print(result)
+    return result
 
 if __name__ == "__main__":
-    main()
+    loopInputExcute(main)
