@@ -1,1 +1,2 @@
 alias ll='ls -la'
+alias run='cd pylocal && python main.py'
