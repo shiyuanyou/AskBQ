@@ -1,5 +1,19 @@
 # 基于python的本地逻辑验证
 
+## 环境准备
+
+## Vscode 类开发者
+
+如果已经你已经基于devcontainer.json配置了devcontainer，那么你已经准备好了环境。
+
+如果还没有，请下载dev container
+
+## 其他开发者
+
+V1版本可以用conda类环境，或者直接python3.12环境。去安装依赖。
+
+`pip install -r requirements.txt`即可
+
 ## 开始使用
 
 step1: 加密保存key
