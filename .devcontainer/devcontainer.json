@@ -20,7 +20,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	,
-	"postCreateCommand": "/workspaces/AskBQ/.devcontainer/init.sh",
+	"postCreateCommand": ".devcontainer/init.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -31,7 +31,7 @@
 
 	,
 	"containerEnv": {
-		"PYTHONPATH": "/workspaces/AskBQ/pylocal",
+		"PYTHONPATH": "./pylocal",
 		"TZ": "Asia/Shanghai"
 	}
 	// Configure tool-specific properties.
