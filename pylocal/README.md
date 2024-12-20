@@ -11,3 +11,7 @@ step2: 使用功能
 2. 输入自己的openai的key或者deepSeek的key `python encrypt.py encrypt "your-api-key-here"`
 3. 解密key验证是否正确：`python encrypt.py decrypt`。其他库调用这个decrypt方法
 4. 更换自己的真实key
+
+## 核心例子
+
+我想做一个提高自己的问题质量的一个web插件，我应该怎么做？
