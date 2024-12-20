@@ -1,18 +1,24 @@
 from openai import OpenAI
 import yaml
+import json
+from encrypt import getKey
 
-with open('config.yml', 'r') as file:
-    config = yaml.safe_load(file)
+url = "https://api.deepseek.com"
 
-client = OpenAI(api_key=config['key'], base_url=config['url'])
+def main():
+    key = getKey()
+    print(key)
 
-response = client.chat.completions.create(
-    model="deepseek-chat",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant"},
-        {"role": "user", "content": "Hello"},
-    ],
-    stream=False
-)
+    # client = OpenAI(api_key=key, base_url=url)
+    # response = client.chat.completions.create(
+    #     model="deepseek-chat",
+    #     messages=[
+    #         {"role": "system", "content": "You are a helpful assistant"},
+    #         {"role": "user", "content": "Hello"},
+    #     ],
+    #     stream=False
+    # )
+    # print(response.choices[0].message.content)
 
-print(response.choices[0].message.content)
+if __name__ == "__main__":
+    main()
