@@ -29,6 +29,11 @@
 		}
 	}
 
+	,
+	"containerEnv": {
+		"PYTHONPATH": "/workspaces/AskBQ/pylocal",
+		"TZ": "Asia/Shanghai"
+	}
 	// Configure tool-specific properties.
 	// "customizations": {},
 
