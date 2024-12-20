@@ -5,6 +5,30 @@
   <a href="/doc/README-zh.md">简体中文</a>
 </p>
 
+## Table of Contents
+
+- [Ask better questions](#ask-better-questions)
+  - [Table of Contents](#table-of-contents)
+  - [Usage](#usage)
+    - [V1](#v1)
+  - [Plan](#plan)
+  - [Good questions are often more important than answers!](#good-questions-are-often-more-important-than-answers)
+  - [What is the local optimization trap](#what-is-the-local-optimization-trap)
+  - [Types of Doubts](#types-of-doubts)
+  - [Core Purpose](#core-purpose)
+
+## Usage
+
+### V1
+
+[pylocal](/pylocal/README.md)
+
+## Plan
+
+1. v1 version, local python verification logic
+2. v2 version, web browser plugin one-click integration, allowing users and plugins to communicate to find effective questions. Then jump to gpt communication to find answers.
+3. v3 version, users do not need to know gpt. They only need to keep communicating to get answers.
+
 ## Good questions are often more important than answers!
 
 Current gpt's are all capable of generating an answer to your question that is pretty much specific to that question. But that's not nearly enough!
