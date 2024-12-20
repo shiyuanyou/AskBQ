@@ -1,106 +1,119 @@
-# Ask better questions
+# 问更好的问题
 
 <p align="center">
-  <a href="/README.md">English</a> |
-  <a href="/doc/README-zh.md">简体中文</a>
+  <a href="/README.md">简体中文</a> |
+  <a href="/doc/README-en.md">English</a>
 </p>
 
-## Table of Contents
+## 目录
 
-- [Ask better questions](#ask-better-questions)
-  - [Table of Contents](#table-of-contents)
-  - [Usage](#usage)
+- [问更好的问题](#问更好的问题)
+  - [目录](#目录)
+  - [使用方法](#使用方法)
     - [V1](#v1)
-  - [Plan](#plan)
-  - [Good questions are often more important than answers!](#good-questions-are-often-more-important-than-answers)
-  - [What is the local optimization trap](#what-is-the-local-optimization-trap)
-  - [Types of Doubts](#types-of-doubts)
-  - [Core Purpose](#core-purpose)
+  - [规划](#规划)
+  - [核心挑战](#核心挑战)
+  - [核心概念](#核心概念)
+  - [好的问题往往比答案重要!](#好的问题往往比答案重要)
+  - [什么是局部最优陷阱](#什么是局部最优陷阱)
+  - [问题的种类](#问题的种类)
+  - [核心目的](#核心目的)
 
-## Usage
+## 使用方法
 
 ### V1
 
 [pylocal](/pylocal/README.md)
 
-## Plan
+## 规划
 
-1. v1 version, local python verification logic
-2. v2 version, web browser plugin one-click integration, allowing users and plugins to communicate to find effective questions. Then jump to gpt communication to find answers.
-3. v3 version, users do not need to know gpt. They only need to keep communicating to get answers.
+1. v1版本，本地python验证逻辑
+   1. 粗糙逻辑
+   2. 多次迭代
+   3. 展示出逻辑树，可以让人可视化的看到被拆解、具象化的问题。方便自己重新思考
+2. v2版本，web浏览器插件一键集成，可以让用户和插件与沟通找到有效的问题。然后跳转gpt沟通，找到答案。
+3. v3版本，用户无需知道gpt。只需要不断沟通就可以获取答案。
 
-## Good questions are often more important than answers!
+## 核心挑战
 
-Current gpt's are all capable of generating an answer to your question that is pretty much specific to that question. But that's not nearly enough!
+请挑战一些问题[挑战](/doc/challenge.csv)
 
-Why would we need answers? Because there are doubts.
+## 核心概念
 
-Types of doubts:
-1. clear direction, want to know their direction on the answer, so generate doubts.
-2. not clear direction, only know the vague concept, so produce doubt.
-3. there is a vague answer inside, and there is some doubt about this answer.
+[Core](/doc/Core.md)
 
-For the three cases:
-1. a specific question that has a specific answer (gpt is fine)
-2. the second does not produce a direct answer (requires multiple rounds of guidance from gpt), and the degree of depth depends entirely on the quality of the question asked after the person has re-cognized it (**falling into the local optimum trap**)
-3. the third kind of elimination of doubts does not mean to provide answers, but to make the person interested in re-cognizing his problems and re-finding new ones. Eventually the answer is found (gpt does not actively inform and the person does not recognize the problem when he is not aware of it, **falling into the local optimum trap**)
+## 好的问题往往比答案重要!
 
-## What is the local optimization trap
+目前的gpt都是可以针对你的问题，生成一个针对这个问题的差不多的答案。但是这是远远不够的！
 
-GPT answer.
+为什么我们会需要答案？因为有疑惑。
 
-> A local optimality trap is a situation in which a decision or algorithm gets stuck on a small range of optimal solutions in the search for an optimal solution to a problem, and fails to find an optimal solution overall. The locally optimal solution performs best on a local scale, but is not optimal globally. The problem usually arises in optimization algorithms, decision making, or strategy planning.
+疑惑的种类：
+1. 明确方向，想知道自己的方向上的答，所以产生疑惑。
+2. 不明确方向，只知道模糊概念，所以产生疑惑。
+3. 内心有一个隐约的答案，对这个答案有一些疑惑。
+
+对于三种情况：
+1. 具体的问题，是会有具体的答案（gpt就可以）
+2. 第二种是不会产生直接答案的（需要gpt多轮引导），而且深入的程度完全取决于人重新认知之后，提的问题的质量（**陷入局部最优陷阱**）
+3. 第三种消除疑惑并不意味着要提供答案，而是让他对重新认知自己的问题，重新找到新的问题。最终找到答案（gpt不会主动告知、人没有意识到的时候也不会认识到这个问题，**陷入局部最优陷阱**）
+
+## 什么是局部最优陷阱
+
+GPT的回答:
+
+> 局部最优陷阱是指在寻找问题的最优解过程中，决策或算法被卡在一个小范围内的最佳解，而无法找到整体上的最优解。局部最优解在局部范围内表现最好，但从全局来看并不是最佳。问题通常出现在优化算法、决策制定或策略规划中。
 > 
-> Features include:
-> 1. Locally optimal solutions are restricted to a small area.
-> 2. Lack of global view leads to inability to move beyond the local optimum.
-> 3. Commonly found in scenarios such as gradient descent, career choice, and business strategy.
+> 特点包括：
+> 1. 局部最优解限制在小范围内。
+> 2. 缺乏全局视野导致无法跳出局部最优。
+> 3. 常见于梯度下降、职业选择、商业策略等场景。
 > 
-> Solutions include:
-> 1. using heuristic algorithms to explore a larger solution space.
-> 2. Introducing randomness to break the local constraints.
-> 3. searching by starting multiple times from different initial points.
-> 4. Combining long-term planning to avoid short-term decision constraints.
+> 解决方法包括：
+> 1. 使用启发式算法探索更大解空间。
+> 2. 引入随机性以打破局部限制。
+> 3. 通过多次从不同初始点出发搜索。
+> 4. 结合长期规划避免短期决策限制。
 > 
-> The local optimization trap is also prevalent in real life, such as being satisfied with the status quo and neglecting innovation in product design, or being satisfied with the status quo and unwilling to challenge for higher goals in personal growth. Recognizing and attempting to break out of this trap can lead to higher achievement.
+> 局部最优陷阱在现实生活中也普遍存在，例如在产品设计中满足现状而忽视创新，在个人成长中安于现状而不愿挑战更高目标。认识并尝试突破这一陷阱有助于取得更高成就。
 
-This example illustrates it concretely: there is a specific direct answer to the current variety of gpts that are sufficiently available.
+这个例子就具体的说明了：有一个具体的直接答案，目前的各种gpt就充分可以了。
 
-## Types of Doubts
+## 问题的种类
 
-We have already listed three types of doubts; the kinds of questions stand in another latitude (quoted from *Writing as a Craft*, which is a chinese book《写作是门手艺》):
+我们已经列举了三种疑惑的类型，问题的种类是站在另一个纬度（引自《写作是门手艺》）：
 
-| | Big Questions | Small Questions |
+| | 大问题 | 小问题 |
 |---|---|---|
-| Large Meaning | - | - |
-| small meaning | - | - |
+| 大意义 | - | - |
+| 小意义 | - | - |
 
-1. Big questions, big meanings:
-   - For example, the philosophical question “How to live a good life?” This question explores the ultimate meaning and purpose of life, and touches on various aspects of self-knowledge, faith, truth, freedom, justice, art, and beauty.
-2. Big questions, small meanings:
-   - For example, in philosophy, the question “Is there truth?” Although this question may seem grand, in some philosophical schools of thought it may not be directly relevant to the practical applications of everyday life, and therefore its practical significance may be considered relatively small.
-3. Small questions, small meanings:
-   - For example, the philosophical question “Should man obey the law?” Although this question is very important in law and ethics, from a philosophical point of view, it may be regarded as a more specific and limited question, and its scope and significance may not be as far-reaching as those questions that explore the nature of existence and the universe.
-4. Small issues with big implications:
-   - For example, the philosophical question “Does man possess free will?” Although this question seems to be a small question about individual choice, it actually touches on deeper issues of human behavior, moral responsibility, and social structure, and has great philosophical significance.
+1. 大问题、大意义：
+   - 例如，哲学中的“如何过上良好生活？”这个问题探讨了生活的终极意义和目的，涉及到自我认知、信仰、真理、自由、正义、艺术和美等多个方面。
+2. 大问题、小意义：
+   - 例如，哲学中的“是否存在真理？”这个问题虽然看似宏大，但在某些哲学流派看来，它可能并不直接关联到日常生活的实际应用，因此其实际意义可能被认为相对较小。
+3. 小问题、小意义：
+   - 例如，哲学中的“人是否应该服从法律？”这个问题虽然在法学和伦理学中非常重要，但从哲学的角度来看，它可能被视为一个较为具体和局限的问题，其影响范围和意义可能不如那些探讨存在和宇宙本质的问题那么深远。
+4. 小问题、大意义：
+   - 例如，哲学中的“人是否拥有自由意志？”这个问题虽然看似是一个关于个体选择的小问题，但它实际上触及到了人类行为、道德责任以及社会结构等深层次的问题，具有重大的哲学意义。
 
-For an individual, how to turn a big problem into a small problem and how to transform a small meaning into a big meaning is the most crucial. Readers can interact with your familiar AI to see if they can get the answers to the above questions.
+对于一个个体，如何把大问题变小问题，如何把小意义转化为大意义就是最关键的。读者可以自行针对上述问题和你熟悉的AI互动看看是否可以获得答案。
 
-## Core Purpose
+## 核心目的
 
-At this point in the line, two core concepts have been expressed: *3 types of confusion* and *4 types of questions*.
+行文至此，有两个核心概念已经表述：*3种疑惑*和*4类问题*。
 
-The author tends to be confined between the latter two kinds of puzzles, and the questions posed tend to be unspecified. Especially in the author's field of software engineering, to do some technical architecture development, often because of the lack of knowledge, in some old and outdated direction to dig deep, get dusty, and therefore often trapped in a difficult situation.
+笔者往往限于后两种困惑之间，提出的问题也往往是不明所以。尤其在笔者所在的软件工程领域，要做一些技术架构开发的时候，往往因为认知不足，在一些老旧过时的方向上深挖，搞得灰头土脸，因此常陷困苦之中。
 
-So the core goal of this project:**Leveraging large language models, pose better questions, and discover better directions.**
+所以本项目的核心目标：**利用大语言模型，提出更好的问题，找到更好的方向**。
 
-Things this project will not do:
-1. waste time on features that are already on the market today
-2. make a so-called second brain
+本项目不会做的事情：
+1. 浪费时间在目前市面上已经有的功能
+2. 做一个所谓的第二大脑
 
-Things this project will do:
-1. make good use of various big models
-2. compatible with some mainstream api
+本项目会做的事情：
+1. 利用好各种大模型
+2. 兼容一些主流的api
 
-Things this project is expected to do:
-1. explore whether RAG(Retrieval-Augmented Generation) will optimize the overall experience
+本项目预计会做的事情：
+1. 探索一下RAG（检索增强生成）会不会优化整体体验
