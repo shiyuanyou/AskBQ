@@ -14,7 +14,7 @@ from enhanceQ import EnhanceQ
 from webView import loopInputExcute
 
 # 设置日志配置
-log_dir = "/workspaces/AskBQ/pylocal/log"
+log_dir = "./log"
 os.makedirs(log_dir, exist_ok=True)
 
 # 创建自定义的时间格式器

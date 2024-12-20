@@ -4,7 +4,8 @@ from pywebio.output import (
     clear,
     put_text,
     put_loading,
-    OutputPosition
+    OutputPosition,
+    put_scrollable
 )
 import time
 
@@ -18,12 +19,17 @@ def loopInputExcute(func):
         put_loading(shape='border', color='info')
         result = func(user_input)
         clear()
-        put_markdown(f"# 问题\n ## {user_input}")
-        put_markdown(result)
+        put_markdown(f"# 问题\n ## {user_input}")  
+        put_scrollable(
+            put_markdown(f"# 输出\n ## {result}"),
+            height=500,
+            keep_bottom=True
+        )
+
 
 def foo(x:str):
-    time.sleep(5)
-    ret = f"# 输出\n ## 您输入的内容是\n{x}"
+    time.sleep(2)
+    ret = f"xxx\n ## 您输入的内容是\n{x*100}\n ## 您输入的内容是\n{x*100}"
     return ret
 
 def main():
