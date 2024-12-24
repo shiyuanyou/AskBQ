@@ -2,7 +2,9 @@ from pywebio.input import input
 from pywebio.output import (
     put_markdown,
     clear,
-    put_text
+    put_text,
+    put_loading,
+    OutputPosition
 )
 import time
 
@@ -11,8 +13,9 @@ def loopInputExcute(func):
         user_input = input("请输入内容：")
         if user_input == "exit":
             break
-        put_text("请稍等，正在处理...").style('color: blue; font-size: 18px;')
 
+        put_text("请等待", 'info')
+        put_loading(shape='border', color='info')
         result = func(user_input)
         clear()
         put_markdown(f"# 问题\n ## {user_input}")
