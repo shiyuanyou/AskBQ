@@ -45,14 +45,15 @@ def getResult(client, messages):
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=messages,
+            # response_format={ 'type': 'json_object' },
             stream=False
         )
     except Exception as e:
         error_code = e.code
         logging.error(f"Error code: {error_code}")
-        logging.error(f"Error message: {hintRequestErrorCode[error_code]}")
+        # logging.error(f"Error message: {hintRequestErrorCode[error_code]}") 
         logging.error(f"Error creating OpenAI client: {e}")
-        return
+        return ""
     return response.choices[0].message.content
 
 def main(rawQuestion:str):
