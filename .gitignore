@@ -163,3 +163,4 @@ cython_debug/
 pylocal/secret.key
 pylocal/config.json
 *.key
+web-extension/.DS_Store
